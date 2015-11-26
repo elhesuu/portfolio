@@ -1,0 +1,29 @@
+:root, html {
+    /* reset base font size so that 1rem = 10px */
+    font-size: 62.5%; 
+}
+
+html {
+    color: $black;
+    background-color: $yellow;
+    font-family: $sans-serif;
+    font-weight: 300;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    line-height: 1.4em;
+}
+
+.main {
+	font-size: 1.6rem;
+	line-height: 1.5em;
+}
+
+%loose-kerning-title {
+	font-size: 1.2rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+}
