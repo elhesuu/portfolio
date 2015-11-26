@@ -6,11 +6,13 @@ export default class Career extends Component {
     render() {
         return (
             <div className='page career-page'>
-            {
-                map(this.props.content, (item, name) =>
-                    <Role {...item} key={ name } />
-                )
-            }
+                <div className='roles'>
+                {
+                    map(this.props.content, (item, name) =>
+                        <Role {...item} key={ name } />
+                    )
+                }
+                </div>
             </div>
         );
     }

@@ -6,11 +6,13 @@ export default class Skills extends Component {
     render() {
         return (
             <div className='page skills-page'>
-            {
-                map(this.props.content, (skill) =>
-                    <Skill {...skill} key={ skill.category }/>
-                )
-            }
+                <div className='skills'>
+                {
+                    map(this.props.content, (skill) =>
+                        <Skill {...skill} key={ skill.category }/>
+                    )
+                }
+                </div>
             </div>
         );
     }

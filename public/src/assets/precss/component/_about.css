@@ -1,37 +1,34 @@
 .about-page {
 
-	.claim {
-		font-size: 2.4rem;
-		line-height: 1.4em;
-		font-family: $serif;
-		max-width: 50%;
-		margin: 0 auto;
-		transition: opacity .5s $ease-in-out-cubic;
+}
 
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate3d(-50%, -50%, 0);
-	}
-	
-	/* React transition */
+.claim {
+	font-size: 2.4rem;
+	line-height: 1.4em;
+	font-family: $serif;
+	max-width: 50%;
+	margin: 0 auto;
+	transition: opacity .5s $ease-in-out-cubic;
 
-	.claims-transition {
-		&-enter {
-			opacity: 0;
+	@extend absolutely-center;
+}
 
-			&.&-active {
-				opacity: 1;
-			}
-		}
+/* React transition */
 
-		&-leave {
-			opacity: 0;
-			
-			&.&-active {
-				opacity: 0;
-			}
+.claims-transition {
+	&-enter {
+		opacity: 0;
+
+		&.&-active {
+			opacity: 1;
 		}
 	}
 
+	&-leave {
+		opacity: 0;
+		
+		&.&-active {
+			opacity: 0;
+		}
+	}
 }

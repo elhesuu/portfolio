@@ -93,6 +93,7 @@ gulp.task('css', function () {
         require('postcss-simple-vars'),
         require('postcss-inline-comment'),
         require('postcss-nested'),
+        require('postcss-simple-extend'),
         require('css-mqpacker'),
        // require('cssnano')
     ];

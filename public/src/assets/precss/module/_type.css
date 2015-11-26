@@ -1,0 +1,16 @@
+@define-placeholder title {
+	font-family: $sans-serif;
+	font-weight: 700;
+	font-size: 1.6rem;
+	text-transform: uppercase; 
+	margin: 0 0 .5em;
+}
+
+@define-placeholder subtitle {
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.2rem;
+	opacity: .5;
+	margin: 0 0 .5em;
+}

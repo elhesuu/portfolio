@@ -1,10 +1,12 @@
 .nav {
 	position: fixed;
-	bottom: 0;
+	z-index: 1;
+	top: 0;
 	left: 0;
 	right: 0;
 	text-align: center; 
 	text-transform: uppercase;
+	font-size: 0; 
 	
 	background: $yellow;
 	font-family: $sans-serif;	
@@ -12,10 +14,11 @@
 	&-item {
 		display: inline-block;
 		vertical-align: top;
-		padding: 2em;
+		padding: 2em 1.5em 2em 2em;
 		font-weight: 700;
 		letter-spacing: .5em;
-		font-size: 1.2rem; 
+		font-size: 1.2rem;
+		margin-bottom: 1em;
 
 		color: $black;
 		text-decoration: none;
@@ -25,9 +28,9 @@
 			content: '';
 			display: block;
 			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
+			bottom: 1rem;
+			left: 1.5em;
+			right: 1.5em;
 			height: 0;
 			background: $black;
 			transition: height .3s $ease-in-out-cubic;
@@ -35,8 +38,15 @@
 
 		&.active {
 			&:after {
-				height: 3px;	
+				height: 2px;	
 			}
 		}
+	}
+}
+
+@media only screen and (min-width: $tablet-portrait) {
+	.nav {
+		top: auto;
+		bottom: 0;
 	}
 }

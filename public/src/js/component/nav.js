@@ -18,6 +18,7 @@ export default class Nav extends Component {
                     </Link>
                 )
             }
+                <a href='/cv' download target='_blank' className='nav-item'>CV</a>
             </nav>
         );
     }

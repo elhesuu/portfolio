@@ -1,7 +1,10 @@
 @import 'module/_normalize';
 @import 'module/_settings';
 @import 'module/_layout';
+@import 'module/_type';
 
 @import 'component/_nav';
 @import 'component/_page';
 @import 'component/_about';
+@import 'component/_skills';
+@import 'component/_career';
