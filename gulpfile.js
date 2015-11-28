@@ -54,6 +54,7 @@ gulp.task('serve', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
+        proxy: 'localhost:' + PORT,
         open: false,
         files: ['dist/assets/css/main.css', 'dist/js/build.js']
     });
@@ -83,17 +84,20 @@ gulp.task('scripts', function () {
 
 gulp.task('css', function () {
     var processors = [
-        autoprefixer({ 
-            browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
-        }),
         require('postcss-import'),
         require('postcss-simple-vars'),
         require('postcss-inline-comment'),
         require('postcss-nested'),
         require('postcss-simple-extend'),
         require('css-mqpacker'),
-       // require('cssnano')
+        autoprefixer({ 
+            browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
+        })
     ];
+        
+    if (isProduction) {
+        processors.push(require('cssnano'))
+    }
 
     return gulp.src([ assetsSrc + 'precss/**/main.css' ])
         .pipe(plumber(handleError))
@@ -127,6 +131,13 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['clean'], function () {
     gulp.start('scripts', 'css', 'images');
+});
+
+gulp.task('hash', function () {
+    var auth = require('./auth/auth'),
+        email = args.email;
+
+    console.log(auth.createValidHash(email));
 });
 
 gulp.task('default', ['serve', 'browser-sync', 'build', 'watch' ]);

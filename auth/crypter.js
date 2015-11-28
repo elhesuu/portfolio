@@ -1,30 +1,17 @@
-var crypto = require('crypto'),
-    algorithm = 'aes-256-ctr',
-    password = process.env.KEY || 'Ed4dam3els';
+var Hashids = require('hashids'),
+    hashids = new Hashids(process.env.KEY || 'Ed4dam3els', 0, 'jesuvilar19802dc');
 
 function encrypt (text) {
-    var cipher = crypto.createCipher(algorithm, password),
-        crypted = cipher.update(text + '', 'utf8', 'hex');
-
-    crypted += cipher.final('hex');
-
-    return crypted;
+    return hashids.encode(+text);
 }
 
 function decrypt (text) {
     try {
-        var decipher = crypto.createDecipher(algorithm, password),
-            dec = decipher.update(text + '','hex','utf8');
-        
-        dec += decipher.final('utf8');
-        
-        return dec;    
+        return hashids.decode(text);
     } catch (e) {
         return '';
     }
-    
 }
-
 
 module.exports = {
     encrypt: encrypt,
