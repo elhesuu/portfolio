@@ -2,4 +2,5 @@ node_modules
 *.sublime-*
 .DS_Store
 api
+data/users.json
 public/dist/*
