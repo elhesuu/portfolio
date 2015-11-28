@@ -1,13 +1,48 @@
 .page {
-
 	max-width: $tablet-landscape;
-	margin: 0 auto;
-	padding: 0 6%;
-
-
-	@media only screen and (min-width: $tablet-portrait) {
-		text-align: center;
+	padding: 0 1.66em;
+	margin: 13rem 0 10rem;
+	transition: opacity .75s $ease-in-out-cubic,
+				transform .75s $ease-in-out-cubic;
+	
+	/* React transition */	
+	&.transitioning {
+		
+		$scale-enter: 1.02;
+		&-enter {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			transform: translate3d(0, 4rem, 0) scale3d($scale-enter, $scale-enter, $scale-enter);
+			&.&-active {
+				opacity: 1;
+				position: inherit;
+				top: inherit;
+				transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+			}
+		}
+		
+		$scale-leave: .98;
+		&-leave {
+			opacity: 0;
+			transform: translate3d(0, -4rem, 0) scale3d($scale-leave, $scale-leave, $scale-leave);
+			&.&-active {
+				opacity: 0;
+				transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+			}
+		}
 	}
 }
 
+@media only screen and (min-width: $tablet-portrait) {
+	
+	.page {
+		margin: 0 auto;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
 
+}

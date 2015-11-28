@@ -1,0 +1,137 @@
+
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+
+    .visual {
+        position: absolute;     
+    }
+    
+    $scratch-duration: .5s;
+
+    .scratch {
+        height: 2px;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            transform: scale3d(0, 1, 1);
+            transform-origin: 0 0;
+            transition: transform $scratch-duration $ease-in-out-cubic,
+                        left $scratch-duration $ease-in-out-cubic;
+            background: $white;
+            left: 0;
+            right: 0;
+            height: 100%;
+        }
+    }
+    
+    $donut-duration: .55s;
+    $donut-ease: linear;
+
+    .donut {
+        width: 180px;
+        height: 180px;
+        display: inline-block;
+        transition: transform $donut-duration $donut-ease;
+        
+        &-arc {
+            fill: none;
+            stroke: $white;
+            stroke-width: 10px;
+            stroke-linecap: butt;
+            stroke-dasharray: 314.16%;
+            stroke-dashoffset: 314.16%;
+            transition: stroke-dashoffset $donut-duration $donut-ease;
+        }
+    }
+    
+    .lines {
+        position: absolute;
+        font-size: 0;
+        width: 50%;
+        height: 50%;
+        .inside,
+        .outside {
+            position: absolute;
+            width: 100%;
+            padding-bottom: 100%;
+            overflow: hidden;
+        }
+
+        .line {
+            margin-left: 5%;
+            height: 0;
+            width: 3px;
+            background: $white;
+            display: inline-block;
+
+            transition: height .5s $ease-in-out-cubic;
+        }
+
+        .inside {
+            background: $yellow;
+            border-radius: 100%;
+            
+            transition: transform 1s $ease-in-out-cubic;
+        }
+    }
+
+
+    /** Transition */
+    .transition-leave {
+        .scratch:after {
+            transform: scale3d(0, 1, 1);
+        }
+
+        .donut {
+            transition: stroke-dashoffset $donut-duration $donut-ease;
+            transform: rotate(180deg);
+        }
+
+
+        .lines {
+            .inside {
+                transform: rotate(0);    
+            }
+        }
+    }
+
+    .transition-enter {
+        .scratch:after {
+            transform: scale3d(1, 1, 1);
+        }
+
+        .donut {
+            transform: rotate(0);
+            &-arc {
+                transition: stroke-dashoffset $donut-duration $donut-ease;
+                stroke-dashoffset: 240%;
+            }   
+        }
+
+        .lines {
+            .line {
+                height: 400px;
+            }
+            .inside {
+                transform: rotate(62deg);    
+            }
+        }
+    }
+
+    .active {
+        .scratch:after {
+            transform: scale3d(1, 1, 1);
+            left: 75%;
+        }
+
+        
+    }
+}

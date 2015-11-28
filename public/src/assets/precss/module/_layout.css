@@ -18,14 +18,21 @@ body {
     line-height: 1.4em;
 }
 
+.background {
+
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.nav {
+    z-index: 2;
+}
+
 .main {
 	font-size: 1.6rem;
 	line-height: 1.5em;
-}
-
-@define-placeholder absolutely-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
 }

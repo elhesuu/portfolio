@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import Claim from './claim';
 import { map, keys } from 'lodash';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
-const DURATION = 6000,
+const DURATION = 10000,
     timeout = new WeakMap();
 
 function next () {
     const total = keys(this.props.content).length;
-
     cancel.call(this);
-    
-    setTimeout(() => {
+
+    timeout.set(this, setTimeout(() => {
         const activeId = this.state ? this.state.activeId : 0;
         this.setState({ activeId: (activeId + 1) % total });
         next.call(this);
-    }, DURATION);
-
-    timeout.set(this, timeout);
+    }, DURATION));
 }
 
 function cancel () {
@@ -46,14 +43,14 @@ export default class About extends Component {
 
         return (
             <div className='page about-page'>
-            <ReactCSSTransitionGroup
-                transitionName='claims-transition'
+            <TransitionGroup
+                transitionName='transitioning'
                 transitionEnterTimeout={1000}
                 transitionLeaveTimeout={1000}>
             
                 <Claim text={ text } key={ name }></Claim>
             
-            </ReactCSSTransitionGroup>
+            </TransitionGroup>
             </div>
         );
     }

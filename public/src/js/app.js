@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Routing from './component/routing';
-import { createHistory } from 'history';
+import { createHistory, useBasename } from 'history';
 import { mapValues, keys } from 'lodash';
 
 import Main from './component/main';
@@ -31,8 +31,12 @@ function render (data) {
 		createWithProps(Component, { content: data[name] })
 	);
 
+	const history = useBasename(createHistory)({
+		basename: window.location.pathname
+	});
+
 	ReactDOM.render(
-		<Routing main={ Main } routes={ configuredComponents } history={ createHistory() } />,
+		<Routing main={ Main } routes={ configuredComponents } history={ history } />,
 		document.getElementById('root')
 	);
 }

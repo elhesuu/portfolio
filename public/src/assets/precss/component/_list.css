@@ -1,0 +1,38 @@
+.list {
+	&-item {
+		text-align: left; 
+		margin-bottom: 3.5em;
+
+		&-title {
+			@extend title;
+		}
+
+		&-description {
+			margin: 0 0 1.5em;
+		}	
+	}
+	
+}
+
+@media only screen and (min-width: $tablet-portrait) {
+	.list {
+		font-size: 0;
+		text-align: left;
+		margin: 10rem 0;
+
+		&-item {
+			font-size: initial;
+			display: inline-block;
+			vertical-align: top;
+			width: 45%;
+			margin: 0 2.5%;
+		}
+	}
+}
+
+@media only screen and (min-width: $tablet-landscape) {
+	.list-item {
+		width: 30%;
+		margin: 0 1.66%;	
+	}
+}

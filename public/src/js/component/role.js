@@ -12,7 +12,7 @@ function formatPeriod (from, to) {
 		fromFormat = fromDate.getYear() === toDate.getYear() ? 'MMM' : 'MMM/YYYY';
 
 	return [ moment(fromDate).format(fromFormat),
-			moment(toDate).format('MMM/YYYY') ].join(' to ');
+			moment(toDate).format('MMM/YYYY') ].join(' \u00B7 ');
 }
 
 export default class Role extends Component {
@@ -21,10 +21,10 @@ export default class Role extends Component {
     		period = formatPeriod(from, to);
 
         return (
-            <div className='role'>
-            	<h4 className='title'>{ title }</h4>
+            <div className='role list-item'>
+            	<h4 className='category list-item-title'>{ title }</h4>
             	<p className='period'>{ company } / { period }</p>
-            	<p className='description'>{ description }</p>
+            	<p className='list-item-description'>{ description }</p>
             </div>
         );
     }

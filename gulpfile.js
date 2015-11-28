@@ -18,7 +18,6 @@ var gulp =      require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
     nodemon = require('gulp-nodemon'),
-    reload = browserSync.reload,
     babelify =  require('babelify'),
     gulpIf = require('gulp-if'),
     args = require('yargs').argv;
@@ -55,7 +54,8 @@ gulp.task('serve', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
-        proxy: 'localhost:' + PORT
+        open: false,
+        files: ['dist/assets/css/main.css', 'dist/js/build.js']
     });
 });
 
@@ -77,10 +77,7 @@ gulp.task('scripts', function () {
             .pipe(gulpIf(isProduction, uglify()))
             .pipe(gulp.dest(jsDist))
             .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest(jsDist))
-            .on('end', function () {
-                reload();
-            });
+            .pipe(gulp.dest(jsDist));
 });
 
 
@@ -113,9 +110,11 @@ gulp.task('images', function () {
         .pipe(gulp.dest( assetsDist + 'images'));
 });
 
+gulp.task('js-watch', ['scripts'], browserSync.reload);
+
 gulp.task('watch', function () {
-    gulp.watch(viewsSrc, reload);
-    gulp.watch( jsSrc + '**/*.js', ['scripts']);
+    gulp.watch(viewsSrc, browserSync.reload);
+    gulp.watch( jsSrc + '**/*.js', ['js-watch']);
     gulp.watch( assetsSrc + 'precss/**/*.css', ['css']);
     gulp.watch( assetsSrc + 'images/**/*', ['images']);
 });
