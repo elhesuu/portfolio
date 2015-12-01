@@ -39,7 +39,7 @@ var viewsSrc = './views/*',
     },
 
     isProduction = args.env === 'production',
-    PORT = isProduction ? 8080 : 1234;
+    PORT = isProduction ? 80 : 1234;
 
 
 gulp.task('serve', function () {
