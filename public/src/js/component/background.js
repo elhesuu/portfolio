@@ -19,7 +19,7 @@ const defaultDuration = 500,
         active: 'active'
     },
     componentMap = {
-        'donut': Donut,
+        //'donut': Donut,
         'scratch': Scratch,
         //'lines': Lines,
         //'dots': Dots
@@ -41,7 +41,6 @@ function getRandomVisuals (width, height) {
         selected = times(total, () => types[random(types.length - 1)]),
         configs = times(total, partial(getVisualConfig, width, height));
 
-    console.log(total);
     return zip(selected, configs);
 }
 

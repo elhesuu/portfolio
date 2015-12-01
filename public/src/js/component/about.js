@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
 import Claim from './claim';
+import Indicator from './indicator';
 import { map, keys } from 'lodash';
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 const DURATION = 10000,
+    transitionDuration = 1000,
     timeout = new WeakMap();
 
-function next () {
+function show (id) {
     const total = keys(this.props.content).length;
     cancel.call(this);
+    this.setState({ activeId: id % total });
+    timeout.set(this, setTimeout(next.bind(this), DURATION));
+}
 
-    timeout.set(this, setTimeout(() => {
-        const activeId = this.state ? this.state.activeId : 0;
-        this.setState({ activeId: (activeId + 1) % total });
-        next.call(this);
-    }, DURATION));
+function next () {
+    const id = this.state ? this.state.activeId + 1 : 0;
+    show.call(this, id);
 }
 
 function cancel () {
     clearTimeout(timeout.get(this));
+}
+
+function handleClick (id) {
+    show.call(this, id);
 }
 
 export default class About extends Component {
@@ -29,7 +36,7 @@ export default class About extends Component {
     }
 
     componentDidMount() {
-        next.call(this);
+        show.call(this, 0);
     }
 
     componentWillUnmount () {
@@ -38,17 +45,23 @@ export default class About extends Component {
 
     render() {
         const { content } = this.props,
-            name = keys(content)[this.state.activeId],
+            { activeId } = this.state,
+            names = keys(content),
+            name = names[activeId],
             text = content[name];
 
         return (
             <div className='page about-page'>
             <TransitionGroup
                 transitionName='transitioning'
-                transitionEnterTimeout={1000}
-                transitionLeaveTimeout={1000}>
+                transitionEnterTimeout={ transitionDuration }
+                transitionLeaveTimeout={ transitionDuration }>
             
                 <Claim text={ text } key={ name }></Claim>
+                <Indicator
+                    total={ names.length }
+                    current={ activeId }
+                    handleClick={ handleClick.bind(this) } />
             
             </TransitionGroup>
             </div>

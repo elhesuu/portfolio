@@ -1,0 +1,12 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/requestanimationframe",
+    "test/touchevents",
+    "test/css/animations",
+    "test/css/vhunit"
+  ]
+}

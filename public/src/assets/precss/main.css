@@ -2,10 +2,12 @@
 @import 'module/_settings';
 @import 'module/_layout';
 @import 'module/_type';
+@import 'module/_icon';
 
 @import 'component/_background';
 @import 'component/_nav';
 @import 'component/_page';
+@import 'component/_contact';
 @import 'component/_list';
 @import 'component/_about';
 @import 'component/_skills';

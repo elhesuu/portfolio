@@ -3,23 +3,23 @@
 	"skills": [
 		{
 			"category": "Javascript",
-			"description": "Object-oriented Javascript. RESTful single page applications. Experience with MVC frameworks like Backbone and Angular. Knowledge of React and Flux architecture. jQuery, Underscore / Lodash, Require, ES6/Babel, Jasmine, Handlebars, Pixi, Paper, GSAP, Three, Processing."
+			"description": "3 years experience developing RESTful single page applications with MVC frameworks like Backbone and Angular. Knowledge of React and Flux architecture. Object-oriented Javascript. ES2015/Babel, Lodash, Require, CommonJS, Jasmine, Handlebars, Pixi, Paper, GSAP, Three, Processing."
 		},
 		{
 			"category": "HTML / CSS",
-			"description": "W3C-valid, semantic HTML5. Cross-device, responsive CSS3. Compass. Sass, and Less extensions. Bootstrap and Foundation frameworks. CSS-based transitions and animations."
+			"description": "W3C-valid, semantic HTML5. Cross-device, responsive CSS3. Compass, Sass, and Less extensions. PostCSS. Knowledge of Bootstrap and Foundation frameworks. CSS-based transitions and animations."
 		},
 		{
-			"category": "Backend",
+			"category": "Server-side",
 			"description": "Extensive experience with the LAMP Stack. ZF2, Laravel and Codeigniter. Doctrine ORM. PSR coding standards. Kirby, Expression Engine, Wordpress. SQL and relational database design. Knowledge of Node.js / Express / Mongo DB stack." 
 		},
 		{
-			"category": "Social",
-			"description": "Social APIs, Facebook API v2 and OAuth, Twitter, Instagram, Google Maps, Youtube, Foursquare. Extensive experience developing Facebook apps."
+			"category": "Social APIS",
+			"description": "Facebook API v2 and OAuth, Twitter, Instagram, Maps, Youtube, Foursquare. Extensive experience developing Facebook apps."
 		},
 		{
 			"category": "Productivity",
-			"description": "Version control with Git and SVN. Git flow. Bower, Gulp & Grunt task automation. Yeoman generator development. Vagrant."
+			"description": "Version control with Git and SVN. Git flow. Gulp & Grunt task automation. Bower. Yeoman generator development. Vagrant."
 		},
 		{
 			"category": "Methodology",
@@ -30,7 +30,7 @@
 	"career": [
 		{
 			"title": "Senior Frontend Developer",
-			"company": "AKQA / Contractor",
+			"company": "AKQA",
 			"from": "07/2015",
 			"to": "11/2015",
 			"location": "London, United Kingdom",
@@ -38,10 +38,10 @@
 		},
 		{
 			"title": "Senior Javascript Developer",
-			"company": "Freelance",
+			"company": "House Canary",
 			"from": "03/2015",
 			"to": "06/2015",
-			"location": "Cordoba, Argentina",
+			"location": "US / Remotely",
 			"description": "Refactoring / rewriting of a canvas based real estate drawing tool, using a functional approach and implementing game rendering techniques, and part of an Angular.js based appraisal application."
 		},
 		{
@@ -57,7 +57,7 @@
 			"company": "Freelance",
 			"from": "11/2010",
 			"to": "05/2013",
-			"location": "Cordoba, Argentina",
+			"location": "France / Remotely",
 			"description": "Development of AS3 / Flash-based microsites and social apps for brands including Land Rover, J&B, Orange and Larios. HTML5 / CSS3 / JS development for different startup companies."
 		},
 		{
@@ -73,7 +73,7 @@
 			"company": "Upstream",
 			"from": "12/2008",
 			"to": "10/2009",
-			"location": "Cordoba, Argentina",
+			"location": "UK / Remotely",
 			"description": "UI design and HTML / CSS development for several websites property of a multilingual SEO company based in Brighton."
 		},
 		{
@@ -122,10 +122,20 @@
 	],
 
 	"about": {
-		"experienced": "For over 10 years I have helped build websites, games and applications for a wide range of clients including Volvo, Land Rover, Honda, Ballantines, J&B, Dr Martens, PokerStars and Waitrose among others.",
-		"agile": "Fully identified with Agile values, I enjoy being part of teams that focus on achieving results through collaboration.",
-		"clean": "A strong believer that programming should aim at solving problems by removing complexity through abstraction, I focus in writing clean and modular code, easy to read and simple maintain. ",
-		"design": "Educated in visual communication design, I am committed to provide the technical support needed to meticulously interpret and translate design solutions into effective implementations.",
-		"motivated": "Curious and self-motivated, I have a constant desire to learn and improve in both technical and non-technical aspects."
+		"experienced": "For over 10 years I have helped companies like Volvo, PokerStars, Dr Martens, Waitrose, Land Rover, Honda, J&B and Ballantine’s build websites, applications and games.",
+		"clean": "Firmly convinced that programming should solve problems by removing complexity using abstraction, I strive to write clean and modular code, easy to read and simple maintain.",
+		"design": "Educated in Visual Communication Design, it is one of my goals to provide briges between designs and implementations, focusing on detail while attentive to performance and compatibility.",
+		"agile": "Fully identified with Agile principles, I enjoy being part of teams that communicate, collaborate and commit to produce high-value software to deliver the best possible results."
+	},
+
+	"contact": {
+		"message": "I am available for hire. Please get in touch if you think I can contribute to your next project.",
+		"social": {
+			"twitter": "https://twitter.com/jebusss",
+			"github": "https://github.com/elhesuu",
+			"linkedin": "https://uk.linkedin.com/in/jesus-vilar-2a385616"
+		},
+		"phone": "07922158874",
+		"email": "jesus.vilar@gmail.com"
 	}
 }

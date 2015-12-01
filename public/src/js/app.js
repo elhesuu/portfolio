@@ -8,6 +8,7 @@ import Main from './component/main';
 import AboutPage from './component/about';
 import CareerPage from './component/career';
 import SkillsPage from './component/skills';
+import ContactPage from './component/contact';
 
 import ES6Collections from 'es6-collections';
 import ES6Promise from 'es6-promise'; // move 
@@ -23,6 +24,7 @@ const routesComponentMap = {
     'about': AboutPage,
     'career': CareerPage,
     'skills': SkillsPage,
+    'contact': ContactPage
 };
 
 function render (data) {
@@ -32,7 +34,7 @@ function render (data) {
 	);
 
 	const history = useBasename(createHistory)({
-		basename: window.location.pathname
+		basename: window.basename
 	});
 
 	ReactDOM.render(

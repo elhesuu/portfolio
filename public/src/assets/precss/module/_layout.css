@@ -4,13 +4,10 @@
 }
 
 html {
-    color: $black;
-    background-color: $yellow;
+    color: $main-color;
+    background-color: $background-color;
     font-family: $serif;
     font-weight: 300;
-    
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -26,9 +23,10 @@ body {
 .content {
     position: relative;
     z-index: 1;
+    min-height: 100vh;
 }
 
-.nav {
+.nav {  
     z-index: 2;
 }
 

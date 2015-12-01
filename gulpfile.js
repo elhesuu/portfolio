@@ -39,7 +39,7 @@ var viewsSrc = './views/*',
     },
 
     isProduction = args.env === 'production',
-    PORT = isProduction ? 80 : 1234;
+    PORT = isProduction ? 8080 : 1234;
 
 
 gulp.task('serve', function () {
@@ -47,7 +47,7 @@ gulp.task('serve', function () {
         script: 'app.js',
         env: {
             'PORT': PORT,
-            'NODE_ENV': 'development'
+            'NODE_ENV': isProduction ? 'production' : 'development'
         }
     });
 });
@@ -85,10 +85,13 @@ gulp.task('scripts', function () {
 gulp.task('css', function () {
     var processors = [
         require('postcss-import'),
+        require('postcss-for'),
+        require('postcss-math'),
         require('postcss-simple-vars'),
-        require('postcss-inline-comment'),
-        require('postcss-nested'),
         require('postcss-simple-extend'),
+        require('postcss-inline-comment'),
+        require('postcss-discard-comments'),
+        require('postcss-nested'),
         require('css-mqpacker'),
         autoprefixer({ 
             browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
@@ -124,13 +127,21 @@ gulp.task('watch', function () {
 });
 
 
+gulp.task('copy', function() {
+    gulp.src(assetsSrc + 'fonts/*.{ttf,woff,eot,svg}')
+        .pipe(gulp.dest( assetsDist + 'fonts'));
+
+    gulp.src(jsSrc + 'vendor/**/*.js')
+        .pipe(gulp.dest( jsDist + 'vendor'));
+});
+
 gulp.task('clean', function () {
     return gulp.src([ publicDist + '*' ], { read: false })
             .pipe(clean());
 });
 
 gulp.task('build', ['clean'], function () {
-    gulp.start('scripts', 'css', 'images');
+    gulp.start('scripts', 'css', 'images', 'copy');
 });
 
 gulp.task('hash', function () {

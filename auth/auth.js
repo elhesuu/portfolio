@@ -1,6 +1,6 @@
 var fs = require('fs'),
     path = require('path'),
-    session = require('express-session'),
+    cookieSession = require('cookie-session'),
     uniqueId = require('lodash').uniqueId,
     values = require('lodash').values,
     passport = require('passport'),
@@ -68,12 +68,11 @@ module.exports = {
     },
 
     initialize: function (app) {
-        app.use(session({
-            resave: true,
-            secret: SECRET,
-            saveUninitialized: false,
-            genid: function () {
-                return uniqueId(SECRET);
+        app.use(cookieSession({
+            key: 'ueane',
+            keys: ['key1', 'key2'],
+            cookie: {
+                maxAge: 5 * 86400000
             }
         }));
 

@@ -4,10 +4,13 @@ var express = require('express'),
 	app = express(),
 	auth = require('./auth/auth'),
 	path = require('path'),
+	cookieParser = require('cookie-parser'),
+	isProduction = process.env.NODE_ENV === 'production',
 	port = process.env.PORT || 1234;
 
 app.set('views', './views');
 app.set('view engine', 'jade');
+app.use(cookieParser('secreto'));
 app.use(express.static('public'));
 auth.initialize(app);
 
@@ -20,17 +23,17 @@ app.get('/hi', function (req, res) {
 });
 
 function renderOrRedirect (req, res) {
-	return req.isAuthenticated() ?
+	return req.isAuthenticated() || !isProduction ?
 		res.render('index') :
 		res.redirect('/hi');
 }
 
-app.get('/portfolio/:hash', auth.authenticate('/hi'), renderOrRedirect);
-app.get('/*', function renderOrRedirect (req, res) {
-	return req.isAuthenticated() ?
-		res.render('index') :
-		res.redirect('/hi');
+app.get('/portfolio/:hash/:route?', auth.authenticate('/hi'), function (req, res) {
+	
+	return res.render('index', { base: '/portfolio/' + req.params.hash });	
 });
+
+app.get('/*', renderOrRedirect);
 
 app.listen(port, function () {
 	console.log('Listening ' + port);
