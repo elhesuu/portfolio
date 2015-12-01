@@ -21,9 +21,7 @@ export default class Nav extends Component {
             <nav className={ classes.join(' ') }>
                 {
                     routes.map(route => 
-                        <Link
-                            to={ `/${route}` }
-                            key={ route } 
+                        <Link to={ `/${route}` } key={ route } 
                             onClick={ toggleOpen.bind(this, false) }
                             activeClassName='active'
                             className='nav-item'>

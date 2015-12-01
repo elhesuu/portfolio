@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Routing from './component/routing';
 import { createHistory, useBasename } from 'history';
+import useSimpleScroll from 'scroll-behavior/lib/useSimpleScroll';
 import { mapValues, keys } from 'lodash';
 
 import Main from './component/main';
@@ -33,7 +34,7 @@ function render (data) {
 		createWithProps(Component, { content: data[name] })
 	);
 
-	const history = useBasename(createHistory)({
+	const history = useBasename(useSimpleScroll(createHistory))({
 		basename: window.basename
 	});
 

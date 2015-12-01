@@ -14,7 +14,7 @@ export default class RouteTransitionGroup extends Component {
             next = nextContext.location.pathname;
 
         if (next !== prev) {
-          this.setState({ previousPathname: prev });
+            this.setState({ previousPathname: prev });
         }
     }
 

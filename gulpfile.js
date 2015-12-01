@@ -53,11 +53,13 @@ gulp.task('serve', function () {
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(null, {
-        proxy: 'localhost:' + PORT,
-        open: false,
-        files: ['dist/assets/css/main.css', 'dist/js/build.js']
-    });
+    if (!isProduction) {
+        browserSync.init(null, {
+            proxy: 'localhost:' + PORT,
+            open: false,
+            files: ['dist/assets/css/main.css', 'dist/js/build.js']
+        });
+    }
 });
 
 function handleError (err) {  

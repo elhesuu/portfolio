@@ -58,6 +58,7 @@
     "react-dom": "^0.14.3",
     "react-router": "^1.0.0",
     "react-static-container": "^1.0.0",
+    "scroll-behavior": "^0.3.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "whatwg-fetch": "^0.10.1",

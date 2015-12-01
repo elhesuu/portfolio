@@ -36,8 +36,9 @@
 			background: $light;
 			height: 2px;
 			bottom: .5rem;
-			left: 2em;
-			right: 2em;
+			left: 50%;
+			width: 10em;
+			margin-left: -5em;
 			transform-origin: 100% 0;
 			transform: translate3d(0, 0, 0) scale3d(0, 1, 1);
 			transition: transform .5s $ease-in-out-quint;
@@ -150,6 +151,13 @@
 			padding: 2em 1.5em 2em 2em;
 			margin: 0 1em 2em 0;
 			font-size: 1.2rem;
+
+			&:after {
+				margin: 0;
+				left: 2em;
+				right: 2em;
+				width: auto;
+			}
 		}
 
 		&-menu {

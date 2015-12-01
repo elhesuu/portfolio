@@ -2,7 +2,7 @@
 .claim {
 
 	@extend large-text;
-	font-size: 3rem;
+	
 	text-align: left;
 	margin: 0;
 	transition: transform .5s $ease-out-cubic,
