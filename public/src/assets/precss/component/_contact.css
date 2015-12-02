@@ -7,7 +7,7 @@
 }
 
 .social {
-	margin: 1em 0;
+	margin: 1em 0 0;
 	text-align: left; 
 	font-size: 3.2rem;
 
@@ -26,6 +26,15 @@
 		}
 	}
 }
+
+@media only screen and (min-width: $large-mobile-landscape) {
+	.contact-page {
+		.message {
+			font-size: 3.1rem;
+		}
+	}
+}
+
 @media only screen and (min-width: $tablet-portrait) {
 	.contact-page {
 		.message {

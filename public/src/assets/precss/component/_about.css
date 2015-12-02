@@ -83,12 +83,19 @@
 	}
 }
 
+@media only screen and (min-width: $large-mobile-landscape) {
+	.claim {
+		font-size: 3.1rem;
+	}
+}
+
 @media only screen and (min-width: $tablet-portrait) {
 	.claim {
 		font-size: 3.4rem;
 		max-width: 65%;
-		margin: 0 auto;
+		margin: -3em auto 0;
 		text-align: center;
+
 	}
 
 	.indicator {
@@ -97,6 +104,6 @@
 		top: 50%;
 		left: 30%;
 		right: 30%;
-		transform: translate3d(0, 18rem, 0);
+		transform: translate3d(0, 13rem, 0);
 	}
 }
