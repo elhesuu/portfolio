@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { routes } from '../app';
 import { Link } from 'react-router';
 import { capitalize } from 'lodash';
+import Logo from './logo';
 
 function toggleOpen (value) {
     this.setState({ isOpen: !! value });
@@ -19,8 +20,11 @@ export default class Nav extends Component {
 
         return (
             <nav className={ classes.join(' ') }>
+                <Logo />
                 {
-                    routes.map(route => 
+                    routes
+                        .filter(name => name !== 'about')
+                        .map(route => 
                         <Link to={ `/${route}` } key={ route } 
                             onClick={ toggleOpen.bind(this, false) }
                             activeClassName='active'

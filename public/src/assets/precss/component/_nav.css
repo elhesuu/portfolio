@@ -127,9 +127,28 @@
 		}
 	}
 	
-	
 }
 
+.logo {
+	position: absolute;
+	top: 1.5rem;
+	right: 7.5%;
+	background: $background-color;
+	font: normal 700 3rem $sans-serif;
+	text-transform: uppercase;
+	z-index: 3;
+	color: $dark;
+	transition: opacity 1s $ease-in-out-quint 1s;
+	opacity: 1;
+	.full-word { 
+		display: none;
+	}
+
+	.is-open & {
+		transition: opacity 1s $ease-in-out-quint;
+		opacity: 0;
+	}
+}
 
 @media only screen and (min-width: $tablet-portrait) {
 	.nav {
@@ -166,6 +185,24 @@
 
 		&.is-open {
 			transform: none;
+		}
+	}
+
+	.logo {
+		position: fixed;
+		font-size: 1.3rem;
+		letter-spacing: .5em;
+		top: 4rem;
+		left: 50%;
+		right: auto;
+		transform: translate3d(-50%, 0, 0);	
+		
+		.full-word { 
+			display: block;
+		}
+
+		.abbreviature { 
+			display: none;
 		}
 	}
 }
