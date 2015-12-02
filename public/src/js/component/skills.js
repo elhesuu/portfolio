@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { map } from 'lodash';
+import Page from './page';
 import Skill from './skill';
 
 export default class Skills extends Component {
     render() {
         return (
-            <div className='page skills-page'>
+            <Page name='skills'>
                 <div className='skills list'>
                 {
                     map(this.props.content, (skill) =>
@@ -13,7 +14,7 @@ export default class Skills extends Component {
                     )
                 }
                 </div>
-            </div>
+            </Page>
         );
     }
 };

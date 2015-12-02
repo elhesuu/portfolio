@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { map } from 'lodash';
+import Page from './page';
 
 export default class Contact extends Component {
     render() {
-        const { message, email, phone, social } = this.props.content;
+        const { message, social } = this.props.content;
 
         return (
-            <div className='page contact-page'>
+            <Page name='contact'>
                 <div>
                     <p className='message'>{ message }</p>
 
@@ -21,7 +22,7 @@ export default class Contact extends Component {
                     }
                     </div>
                 </div>
-            </div>
+            </Page>
         );
     }
 };

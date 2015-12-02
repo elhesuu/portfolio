@@ -5,6 +5,12 @@
 	transition: opacity .5s $ease-in-out-cubic,
 				transform .5s $ease-in-out-cubic;
 	
+	opacity: 0;
+	
+	&.is-active {
+		opacity: 1;
+	}
+	
 	/* React transition */  
 	&.page-transition {
 		

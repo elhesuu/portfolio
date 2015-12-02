@@ -132,7 +132,7 @@
 .logo {
 	position: absolute;
 	top: 1.5rem;
-	right: 7.5%;
+	right: -92.5%;
 	background: $background-color;
 	font: normal 700 3rem $sans-serif;
 	text-transform: uppercase;

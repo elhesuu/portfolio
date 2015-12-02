@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Claim from './claim';
+import Page from './page';
 import Indicator from './indicator';
 import { map, keys } from 'lodash';
 import wait from './../util/wait';
@@ -37,7 +38,7 @@ export default class About extends Component {
     }
 
     componentDidMount() {
-        wait(100).then(show.bind(this, 0)); // @hack
+        show.call(this, 0); // @hack
     }
 
     componentWillUnmount () {
@@ -52,20 +53,20 @@ export default class About extends Component {
             text = content[name];
 
         return (
-            <div className='page about-page'>
-            <TransitionGroup
-                transitionName='claim-transition'
-                transitionEnterTimeout={ transitionDuration }
-                transitionLeaveTimeout={ transitionDuration }>
-            
-                <Claim text={ text } key={ name }></Claim>
-                <Indicator
-                    total={ names.length }
-                    current={ activeId }
-                    handleClick={ handleClick.bind(this) } />
-            
-            </TransitionGroup>
-            </div>
+            <Page name="about">
+                <TransitionGroup
+                    transitionName='claim-transition'
+                    transitionEnterTimeout={ transitionDuration }
+                    transitionLeaveTimeout={ transitionDuration }>
+                
+                    <Claim text={ text } key={ name }></Claim>
+                    <Indicator
+                        total={ names.length }
+                        current={ activeId }
+                        handleClick={ handleClick.bind(this) } />
+                
+                </TransitionGroup>
+            </Page>
         );
     }
 }
