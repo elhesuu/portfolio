@@ -7,14 +7,14 @@ export default class Indicator extends Component {
 
         return (
             <div className='indicator'>
-            	{
-                    times(total, index =>
-                        <div key={ index }
-                            className={ `indicator-item ${ index === current ? 'active' : ''}` }
-                            onClick={ partial(handleClick, index) } />
-                    )
-                }
+                    {
+                        times(total, index =>
+                            <div key={ index }
+                                className={ `indicator-item ${ index === current ? 'active' : ''}` }
+                                onClick={ partial(handleClick, index) } />
+                        )
+                    }
             </div>
-        );
+        )
     }
 };

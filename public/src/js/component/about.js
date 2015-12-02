@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Claim from './claim';
 import Indicator from './indicator';
 import { map, keys } from 'lodash';
+import wait from './../util/wait';
 import TransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 const DURATION = 10000,
@@ -32,11 +33,11 @@ export default class About extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { activeId: 0 };
+        this.state = { activeId: -1 };
     }
 
     componentDidMount() {
-        show.call(this, 0);
+        wait(100).then(show.bind(this, 0)); // @hack
     }
 
     componentWillUnmount () {
@@ -53,7 +54,7 @@ export default class About extends Component {
         return (
             <div className='page about-page'>
             <TransitionGroup
-                transitionName='transitioning'
+                transitionName='claim-transition'
                 transitionEnterTimeout={ transitionDuration }
                 transitionLeaveTimeout={ transitionDuration }>
             

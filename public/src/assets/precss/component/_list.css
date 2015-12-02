@@ -26,7 +26,7 @@
 	}
 }
 
-.transitioning-leave {
+.page-transition-leave {
 	.list-item {
 		transition-timing-function: $ease-in-cubic;
 		transition-duration: .25s;
@@ -41,7 +41,7 @@
 	}
 }
 
-.transitioning-enter {
+.page-transition-enter {
 	.list-item {
 		transition-timing-function: $ease-out-cubic;
 		transform: translate3d(0, 3em, 0);

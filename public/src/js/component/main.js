@@ -19,7 +19,7 @@ export default class Main extends Component {
                     transitionDuration={ 500 } />
                 <Nav />
                 <RouteTransitionGroup component='div' className='content'
-                    transitionName='transitioning'
+                    transitionName='page-transition'
                     transitionEnterTimeout={1000}
                     transitionLeaveTimeout={1000}
                     >
