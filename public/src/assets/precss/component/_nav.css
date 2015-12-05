@@ -134,7 +134,9 @@
 	top: 1.5rem;
 	right: -92.5%;
 	background: $background-color;
-	font: normal 700 3rem $sans-serif;
+	font-family: $sans-serif;
+	font-size: 3rem;
+	font-weight: 700;
 	text-transform: uppercase;
 	z-index: 3;
 	color: $dark;

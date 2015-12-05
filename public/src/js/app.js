@@ -11,9 +11,6 @@ import CareerPage from './component/career';
 import SkillsPage from './component/skills';
 import ContactPage from './component/contact';
 
-import ES6Collections from 'es6-collections';
-import ES6Promise from 'es6-promise'; // move 
-import WhatwgFetch from 'whatwg-fetch'; // move 
 
 function createWithProps (Component, props) {
 	return React.createClass({
@@ -43,8 +40,6 @@ function render (data) {
 		document.getElementById('root')
 	);
 }
-
-ES6Promise.polyfill();
 
 fetch('/content.json')
 	.then(res => res.json())

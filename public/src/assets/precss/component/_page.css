@@ -48,6 +48,7 @@
     top: 50%;
     left: 0;
     right: 0;
+    width: 100%;
     transform: translate3d(0, -50%, 0);
 
 	&.page-transition {
@@ -77,5 +78,9 @@
 		justify-content: center;
 		text-align: center;
 		min-height: 100vh;
+
+		.list {
+			max-width: 100%; 
+		}
 	}
 }

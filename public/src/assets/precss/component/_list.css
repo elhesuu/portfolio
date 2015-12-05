@@ -56,7 +56,7 @@
 		margin: 10rem 0;
 
 		&-item {
-			font-size: initial;
+			font-size: 1.5rem;
 			display: inline-block;
 			vertical-align: top;
 			width: 45%;
