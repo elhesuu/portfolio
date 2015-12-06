@@ -24,6 +24,11 @@ body {
     position: relative;
     z-index: 1;
     min-height: 100vh;
+
+    .is-transitioning & {
+        height: 100vh;
+        overflow: hidden;
+    }
 }
 
 .nav {  
@@ -33,4 +38,6 @@ body {
 .main {
 	font-size: 1.6rem;
 	line-height: 1.5em;
+
+    
 }

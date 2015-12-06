@@ -3,7 +3,7 @@
 	"skills": [
 		{
 			"category": "Javascript",
-			"description": "3 years experience developing RESTful single page applications with MVC frameworks like Backbone and Angular. Knowledge of React and Flux architecture. Object-oriented Javascript. ES2015/Babel, Lodash, Require, CommonJS, Jasmine, Handlebars, Pixi, Paper, GSAP, Three, Processing."
+			"description": "Extensive experience developing RESTful single-page applications using MVC frameworks like Backbone and Angular. Experience using React in non-commercial projects. Object-oriented Javascript. ES2015/Babel, Lodash, Require, CommonJS, Jasmine, Handlebars, Pixi, Paper, GSAP, Three, Processing."
 		},
 		{
 			"category": "HTML / CSS",
@@ -19,11 +19,11 @@
 		},
 		{
 			"category": "Productivity",
-			"description": "Version control with Git and SVN. Git flow. Gulp & Grunt task automation. Bower. Yeoman generator development. Vagrant."
+			"description": "Version control with Git and SVN. Experience with Git flow. Gulp & Grunt task automation. Yeoman generator development. Composer, Bower, Vagrant."
 		},
 		{
 			"category": "Methodology",
-			"description": "Functional programming style. Knowledge of TDD / BDD. Experiencie working in Agile environments."
+			"description": "Functional programming style. Knowledge of TDD / BDD. Experiencie working in Agile environments and using Continuous delivery processes."
 		}
 
 	],
@@ -33,23 +33,23 @@
 			"company": "AKQA",
 			"from": "07/2015",
 			"to": "11/2015",
-			"location": "London, United Kingdom",
-			"description": "Development of several projects for a global automotive manufacturer, including the new car configurator prototype, using ES6, Require.js and Backbone with a functional programming style."
+			"location": "London, UK / Gothenburg, Sweden",
+			"description": "Development of several projects for a global automotive manufacturer, including the prototype of new car configurator, using Node, Backbone, Browserify, Gulp, Compass and ES6, Babel, Require.js, Sass, Google APIs."
 		},
 		{
 			"title": "Senior Javascript Developer",
 			"company": "House Canary",
 			"from": "03/2015",
 			"to": "06/2015",
-			"location": "US / Remotely",
-			"description": "Refactoring / rewriting of a canvas based real estate drawing tool, using a functional approach and implementing game rendering techniques, and part of an Angular.js based appraisal application."
+			"location": "United States (Remotely)",
+			"description": "Rewriting of a canvas-based real estate drawing tool part of an appraiser application, built as a module and implementing game rendering techniques, using Angular.js, Bower, Lodash, Jasmine and an object-oriented, functional approach."
 		},
 		{
 			"title": "Senior Web Developer",
 			"company": "Maido",
 			"from": "06/2013",
 			"to": "10/2014",
-			"location": "London, United Kingdom",
+			"location": "London, UK",
 			"description": "Full stack web development of social apps and games for mobile and desktop, using Backbone.js, Require.js and Sass, HTML5, PHP Zend Framework 2 and Laravel. Clients included Dr. Martens, Pokerstars, Waitrose."
 		},
 		{
@@ -57,7 +57,7 @@
 			"company": "Freelance",
 			"from": "11/2010",
 			"to": "05/2013",
-			"location": "France / Remotely",
+			"location": "France (Remotely)",
 			"description": "Development of AS3 / Flash-based microsites and social apps for brands including Land Rover, J&B, Orange and Larios. HTML5 / CSS3 / JS development for different startup companies."
 		},
 		{
@@ -73,7 +73,7 @@
 			"company": "Upstream",
 			"from": "12/2008",
 			"to": "10/2009",
-			"location": "UK / Remotely",
+			"location": "UK (Remotely)",
 			"description": "UI design and HTML / CSS development for several websites property of a multilingual SEO company based in Brighton."
 		},
 		{
@@ -122,10 +122,10 @@
 	],
 
 	"about": {
-		"experienced": "For over 10 years I have helped companies like Volvo, PokerStars, Dr Martens, Waitrose, Land Rover, Honda, J&B and Ballantine’s build websites, applications and games.",
-		"clean": "Convinced that programming is a tool to split complex problems into simpler pieces, I strive to write clean and modular code, easy to read and simple to maintain.",
-		"design": "Formed in Visual Communication Design, I am capable to mediate between design and implementation, protecting code quality while watchful of visual detail.",
-		"agile": "Fully identified with Agile principles, I enjoy being part of teams that communicate, collaborate and commit to produce high-value software and deliver the finest result."
+		"experienced": "For over 10 years I have helped agencies and companies from the UK, Europe and Latin America build websites, applications and games.",
+		"design": "Formed in Visual Communication Design, I am an efficient mediator between design and implementation, protecting code quality while perceptive of visual detail.",
+		"clean": "Convinced that complex problems should be solved granularly, I aim at writing modular code, easy to read and simple to maintain.",
+		"agile": "Fully identified with Agile principles, I enjoy being part of teams that communicate and collaborate to produce high-value software and deliver the finest result."
 	},
 
 	"contact": {

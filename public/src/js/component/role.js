@@ -17,13 +17,21 @@ function formatPeriod (from, to) {
 
 export default class Role extends Component {
     render() {
-    	const { title, company, from, to, description } = this.props,
+    	const {  
+                title,
+                company,
+                from,
+                to,
+                description,
+                location
+            } = this.props,
     		period = formatPeriod(from, to);
 
         return (
             <div className='role list-item'>
             	<h4 className='category list-item-title'>{ title }</h4>
             	<p className='period'>{ company } / { period }</p>
+                <p className='location'>{ location }</p>
             	<p className='list-item-description'>{ description }</p>
             </div>
         );

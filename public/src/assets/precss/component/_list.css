@@ -8,10 +8,12 @@
 		&-title {
 			font-family: $sans-serif;
 			font-weight: 700;
-			font-size: 1.6rem;
+			font-size: 1.3rem;
+			letter-spacing: .2em;
 			text-transform: uppercase; 
-			margin: 0 0 .5em;
-			color: $white;
+			margin: 0 0 1em;
+			color: $dark;
+
 		}
 
 		&-description {
@@ -53,23 +55,23 @@
 	.list {
 		font-size: 0;
 		text-align: left;
-		margin: 10rem 0;
+		margin: 15rem 0;
 
 		&-item {
 			font-size: 1.5rem;
 			display: inline-block;
 			vertical-align: top;
 			width: 45%;
-			margin: 0 2.5%;
+			margin: 0 2.5% 3em;
 		}
 	}
 }
 
-@media only screen and (min-width: $tablet-landscape) {
+/*@media only screen and (min-width: $tablet-landscape) {
 	.list{
 		&-item {
 			width: 30%;
-			margin: 0 1.66%;	
+			margin: 0 1.66% ;		
 		}
 	}
-}
+}*/

@@ -46,8 +46,8 @@
 }
 
 .indicator {
-	height: 1px;
-	background: $light;
+	height: 2px;
+	background: rgba(255,255,255, .3);
 	font-size: 0;
 	margin-top: 3rem;
 	
@@ -66,8 +66,8 @@
 			display: block;
 			position: absolute;
 			width: 100%;
-			top: 6px;
-			height: 3px;
+			top: 7px;
+			height: 2px;
 			background: $white;
 			transform: scale3d(0, 1, 1);
 			transform-origin: 100% 50%;

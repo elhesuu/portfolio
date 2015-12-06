@@ -1,5 +1,5 @@
 .page {
-	max-width: $tablet-landscape;
+	max-width: $tablet-portrait;
 	padding: 0 1.66em;
 	margin: 10rem 0;
 	transition: opacity .5s $ease-in-out-cubic,
