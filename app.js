@@ -28,7 +28,11 @@ function renderOrRedirect (req, res) {
 		res.redirect('/hi');
 }
 
-app.get('/portfolio/:hash/:route?', auth.authenticate('/hi'), function (req, res) {
+app.get('/cv', function (req, res) {
+	return res.sendFile(path.join(__dirname, 'data/cv.pdf'));
+});
+
+app.get('/portfolio/:hash/:route?', auth.authenticateOr('/hi'), function (req, res) {
 	
 	return res.render('index', { base: '/portfolio/' + req.params.hash });	
 });

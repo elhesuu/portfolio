@@ -93,7 +93,7 @@ module.exports = {
 
     },
 
-    authenticate: function (failure) {
+    authenticateOr: function (failure) {
         return passport.authenticate('hash', { failureRedirect: failure});
     }
 };

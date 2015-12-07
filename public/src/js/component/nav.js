@@ -33,6 +33,7 @@ export default class Nav extends Component {
                         </Link>
                     )
                 }
+                <a className='nav-item' href='/cv' download>CV</a>
                 <div className='nav-menu'>
                     <div className='nav-hamburger' onClick={ toggleOpen.bind(this, !this.state.isOpen) }>
                         <div className='nav-hamburger-bar'></div>
