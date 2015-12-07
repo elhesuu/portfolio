@@ -11,11 +11,11 @@
 		},
 		{
 			"category": "Server-side",
-			"description": "Extensive experience with the LAMP Stack. ZF2, Laravel and Codeigniter. Doctrine ORM. PSR coding standards. Kirby, Expression Engine, Wordpress. SQL and relational database design. Knowledge of Node.js / Express / Mongo DB stack." 
+			"description": "PHP Certified Engineer. Extensive experience with the LAMP Stack. ZF2, Laravel and Codeigniter. Doctrine ORM. PSR coding standards. Kirby, Expression Engine, Wordpress. SQL and relational database design. Knowledge of Node.js / Express / Mongo DB stack." 
 		},
 		{
 			"category": "Social APIS",
-			"description": "Facebook API v2 and OAuth, Twitter, Instagram, Maps, Youtube, Foursquare. Extensive experience developing Facebook apps."
+			"description": "Facebook API v2 and OAuth, Twitter, Instagram, Maps, Fusion Tables, Youtube, Foursquare. Extensive experience developing Facebook apps."
 		},
 		{
 			"category": "Productivity",
@@ -34,7 +34,7 @@
 			"from": "07/2015",
 			"to": "11/2015",
 			"location": "London, UK / Gothenburg, Sweden",
-			"description": "Development of several projects for a global automotive manufacturer, including the prototype of new car configurator, using Node, Backbone, Browserify, Gulp, Compass and ES6, Babel, Require.js, Sass, Google APIs."
+			"description": "Development of several projects for a global automotive manufacturer, including the prototype of the new car configurator, using Node, Backbone, Browserify, Gulp, Compass and ES6, Babel, Require.js, Sass, Google APIs."
 		},
 		{
 			"title": "Senior Javascript Developer",
