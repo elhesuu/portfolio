@@ -1,4 +1,6 @@
-	'use strict';
+'use strict';
+
+require('dotenv').load();
 
 var express = require('express'),
 	app = express(),
@@ -6,11 +8,12 @@ var express = require('express'),
 	path = require('path'),
 	cookieParser = require('cookie-parser'),
 	isProduction = process.env.NODE_ENV === 'production',
-	port = process.env.PORT || 1234;
+	port = process.env.PORT,
+	secret = process.env.COOKIE_SECRET;
 
 app.set('views', './views');
 app.set('view engine', 'jade');
-app.use(cookieParser('secreto'));
+app.use(cookieParser(secret));
 app.use(express.static('public'));
 auth.initialize(app);
 

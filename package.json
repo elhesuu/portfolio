@@ -22,6 +22,7 @@
     "css-mqpacker": "^4.0.0",
     "cssnano": "^3.3.2",
     "csswring": "^4.0.0",
+    "dotenv": "^1.2.0",
     "es6-collections": "^0.5.5",
     "es6-promise": "^3.0.2",
     "express": "^4.13.3",

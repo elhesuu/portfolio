@@ -8,10 +8,10 @@ var fs = require('fs'),
     HashStrategy = require('passport-hash').Strategy;
 
 var FILE = '../data/users.json',
-    SECRET = 'erss3port',
-    interval = 1000 * 60, // minutes
+    secret = process.env.COOKIE_SECRET,
+    interval = 1000 * 60,               // minutes
     expirationThreshold = 5 * 86400000, // in days 
-    fakeUser = { name: 'Fake' }; // @todo get real users
+    fakeUser = { name: 'Fake' };        // @todo get real users
 
 function readHashes () {
     var src = path.join(__dirname, FILE);
@@ -69,7 +69,7 @@ module.exports = {
 
     initialize: function (app) {
         app.use(cookieSession({
-            key: 'ueane',
+            key: secret,
             keys: ['key1', 'key2'],
             cookie: {
                 maxAge: 5 * 86400000
